@@ -1,23 +1,28 @@
+import './index.css';
+
 const contentDiv = document.createElement('div');
+contentDiv.id = "content";
 
-/* headline */
-const headline = document.createElement('h1'); 
-headline.textContent = "Taco Bell Menu";
-console.log(headline);
+/*Nav Bar*/
+const navBarWrapper = document.createElement('div');
+navBarWrapper.id = "navBarWrapper";
 
-const imgDiv = document.createElement('div');
-imgDiv.style = "width: 50px;";
-const imgTag = document.createElement('img');
-imgTag.src = "../src/taco-icon.svg";
-imgDiv.appendChild(imgTag);
+const homeTabWrapper = document.createElement('div');
+homeTabWrapper.classList.add("tabWrapper");
+homeTabWrapper.textContent = "Home";
 
-const descriptionDiv = document.createElement('div');
-const h2Tag = document.createElement('h2');
-h2Tag.textContent = "Find tacos near you today";
-descriptionDiv.appendChild(h2Tag);
+const menuTabWrapper = document.createElement('div');
+menuTabWrapper.classList.add("tabWrapper");
+menuTabWrapper.textContent = "Menu";
 
-contentDiv.appendChild(headline);
-contentDiv.appendChild(imgDiv);
-contentDiv.appendChild(descriptionDiv);
+const contactTabWrapper = document.createElement('div');
+contactTabWrapper.classList.add("tabWrapper");
+contactTabWrapper.textContent = "Contact";
+
+navBarWrapper.appendChild(homeTabWrapper);
+navBarWrapper.appendChild(menuTabWrapper);
+navBarWrapper.appendChild(contactTabWrapper);
+
+contentDiv.appendChild(navBarWrapper);
 
 document.body.appendChild(contentDiv);
