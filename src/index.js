@@ -1,4 +1,7 @@
 import './index.css';
+import home from './home';
+import menu from './menu';
+import contact from './contact';
 
 const contentDiv = document.createElement('div');
 contentDiv.id = "content";
@@ -24,5 +27,8 @@ navBarWrapper.appendChild(menuTabWrapper);
 navBarWrapper.appendChild(contactTabWrapper);
 
 contentDiv.appendChild(navBarWrapper);
+contentDiv.appendChild(home);
+contentDiv.appendChild(menu);
+contentDiv.appendChild(contact);
 
 document.body.appendChild(contentDiv);
