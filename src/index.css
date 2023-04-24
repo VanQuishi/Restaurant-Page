@@ -1,5 +1,14 @@
-#navBarWrapper{
-  height: 60px;
+body{
+  height: 100vh;
+}
+
+#content{
+  height: 100%;
+  display: grid;
+  grid-template-rows: 60px 1fr 60px;
+}
+
+#header{
   border: 1px solid red;
   display: flex;
   justify-content: center;
@@ -18,6 +27,7 @@
 .moduleWrapper{
   border: 1px solid green;
   display: grid;
+  height: 100%;
 }
 
 .moduleChild{
@@ -39,4 +49,8 @@
 
 #contactWrapper input {
   margin-bottom: 10px;
+}
+
+#footer{
+  /* height: 50px; */
 }

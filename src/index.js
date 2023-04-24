@@ -1,34 +1,45 @@
 import './index.css';
+import header from './header';
 import home from './home';
 import menu from './menu';
 import contact from './contact';
+import footer from './footer';
 
 const contentDiv = document.createElement('div');
 contentDiv.id = "content";
 
-/*Nav Bar*/
-const navBarWrapper = document.createElement('div');
-navBarWrapper.id = "navBarWrapper";
-
-const homeTabWrapper = document.createElement('div');
-homeTabWrapper.classList.add("tabWrapper");
-homeTabWrapper.textContent = "Home";
-
-const menuTabWrapper = document.createElement('div');
-menuTabWrapper.classList.add("tabWrapper");
-menuTabWrapper.textContent = "Menu";
-
-const contactTabWrapper = document.createElement('div');
-contactTabWrapper.classList.add("tabWrapper");
-contactTabWrapper.textContent = "Contact";
-
-navBarWrapper.appendChild(homeTabWrapper);
-navBarWrapper.appendChild(menuTabWrapper);
-navBarWrapper.appendChild(contactTabWrapper);
-
-contentDiv.appendChild(navBarWrapper);
+contentDiv.appendChild(header);
 contentDiv.appendChild(home);
-contentDiv.appendChild(menu);
-contentDiv.appendChild(contact);
+contentDiv.appendChild(footer);
 
 document.body.appendChild(contentDiv);
+
+/*switchTab Logic*/
+function switchTab(tabId) {
+  console.log("switchTab is called");
+  contentDiv.removeChild(contentDiv.children[1]); //lastChild is currently the content of each tab
+  switch (tabId) {
+    case "homeTab":
+      contentDiv.insertBefore(home, contentDiv.children[1]);
+      break;
+    case "menuTab":
+      contentDiv.insertBefore(menu, contentDiv.children[1]);
+      break;
+    case "contactTab":
+      contentDiv.insertBefore(contact, contentDiv.children[1]);
+      break;
+    default:
+      contentDiv.insertBefore(home, contentDiv.children[1]);
+      break;
+  }
+}
+
+const tabs = document.getElementsByClassName("tabWrapper");
+console.log({tabs});
+for (let i = 0; i < tabs.length; i++) {
+  console.log(tabs[i]);
+  let tabId = tabs[i].getAttribute('id');
+  console.log({tabId});
+  tabs[i].onclick = () => {switchTab(tabId);};
+}
+/*End of switchTab Logic*/
