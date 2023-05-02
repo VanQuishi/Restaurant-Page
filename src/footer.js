@@ -1,5 +1,4 @@
 const footer = document.createElement('div');
-footer.classList.add('moduleWrapper');
 footer.id = "footer";
 
 const creditWrapper = document.createElement('div');

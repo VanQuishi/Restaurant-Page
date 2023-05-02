@@ -3,15 +3,25 @@ home.classList.add('moduleWrapper');
 
 const titleWrapper = document.createElement('div');
 titleWrapper.classList.add('moduleChild');
+titleWrapper.id = "titleWrapper";
 let h1Title = document.createElement('h1');
-h1Title.textContent = "Nin's Taco Bar";
+h1Title.textContent = "Unicorn's Taco Bar";
+let logo = document.createElement('img');
+logo.src = "../src/unicorn.svg";
 titleWrapper.appendChild(h1Title);
+titleWrapper.appendChild(logo);
 
 const descriptionWrapper = document.createElement('div');
 descriptionWrapper.classList.add('moduleChild');
-let paraDesc = document.createElement('p');
-paraDesc.textContent = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mattis nunc sed blandit libero volutpat. Donec massa sapien faucibus et molestie ac."
+let paraDesc = document.createElement('h3');
+paraDesc.textContent = "Unicorn's Taco Bar specializes in Mexican-inspired food"
+let paraDesc2 = document.createElement('h3');
+paraDesc2.textContent = "Made fresh by hand";
+let paraDesc3 = document.createElement('h3');
+paraDesc3.textContent = "Unique recipes that you can't find elsewhere!";
 descriptionWrapper.appendChild(paraDesc);
+descriptionWrapper.appendChild(paraDesc2);
+descriptionWrapper.appendChild(paraDesc3);
 
 const hoursWrapper = document.createElement('div');
 hoursWrapper.classList.add('moduleChild');
