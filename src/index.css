@@ -2,6 +2,7 @@ body{
   height: 100vh;
   padding: 0; 
   margin: 0;
+  background-color: #f9fafb;
 }
 
 h1, h2, h3{
@@ -12,9 +13,8 @@ h1, h2, h3{
 #content{
   height: 100%;
   display: grid;
-  grid-template-rows: 60px 1fr 60px;
+  grid-template-rows: minmax(auto, 60px) auto minmax(auto, 60px);
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  background-color: #f9fafb;
 }
 
 #header{
@@ -81,9 +81,9 @@ h1, h2, h3{
   width: 40px;
 }
 
-#contactWrapper input {
+/* #contactWrapper input {
   margin-bottom: 10px;
-}
+} */
 
 #footer{
   border-top: 1px solid #e5e7eb;
