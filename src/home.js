@@ -1,3 +1,5 @@
+import unicorn from "../src/unicorn.svg";
+
 const home = document.createElement('div');
 home.classList.add('moduleWrapper');
 
@@ -7,7 +9,7 @@ titleWrapper.id = "titleWrapper";
 let h1Title = document.createElement('h1');
 h1Title.textContent = "Unicorn's Taco Bar";
 let logo = document.createElement('img');
-logo.src = "../src/unicorn.svg";
+logo.src = unicorn;
 titleWrapper.appendChild(h1Title);
 titleWrapper.appendChild(logo);
 
