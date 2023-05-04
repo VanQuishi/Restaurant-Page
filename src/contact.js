@@ -3,16 +3,32 @@ contact.classList.add('moduleWrapper');
 contact.id = "contactWrapper";
 
 const titleWrapper = document.createElement('div');
-titleWrapper.classList.add('moduleChild');
+titleWrapper.classList.add('moduleChild', 'title');
 let h1Title = document.createElement('h1');
 h1Title.textContent = "Contact";
 titleWrapper.appendChild(h1Title);
 
-const actionCallWrapper = document.createElement('div');
-actionCallWrapper.classList.add('moduleChild');
-let h2Title = document.createElement('h2');
-h2Title.textContent = "Let's keep the talk on Tacos going!";
-actionCallWrapper.appendChild(h2Title);
+let actionCall = document.createElement('h4');
+actionCall.id = "actionCall"
+actionCall.textContent = "Let's keep the talk on Tacos going!";
+
+let emailForm = document.createElement('form');
+emailForm.classList.add('moduleChild');
+emailForm.id = "emailForm";
+
+let emailInput = document.createElement('input');
+emailInput.type = "email";
+emailInput.placeholder = "Your email";
+
+let contentInput = document.createElement('textarea');
+
+const button = document.createElement('button')
+button.textContent = "Submit";
+
+emailForm.appendChild(actionCall);
+emailForm.appendChild(emailInput);
+emailForm.appendChild(contentInput);
+emailForm.appendChild(button);
 
 /* const emailWrapper = document.createElement('div');
 let emailInput = document.createElement('input');
@@ -39,6 +55,7 @@ formWrapper.appendChild(emailForm);
 formWrapper.appendChild(button); */
 
 contact.appendChild(titleWrapper);
-contact.appendChild(actionCallWrapper);
+/* contact.appendChild(actionCallWrapper); */
 /* contact.appendChild(formWrapper); */
+contact.appendChild(emailForm);
 export default contact;

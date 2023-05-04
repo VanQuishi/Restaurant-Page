@@ -36,6 +36,15 @@ h1, h2, h3{
 #titleWrapper img{
   width: 100px;
   margin-top: 10px;
+  padding-bottom: 10px;
+}
+
+.title h1{
+  margin-top: 2rem;
+}
+
+#descriptionWrapper{
+  padding-bottom: 30px;
 }
 
 .tabWrapper{
@@ -48,7 +57,6 @@ h1, h2, h3{
 }
 
 .moduleWrapper{
-  /* border: 1px solid green; */
   display: grid;
   height: 100%;
   grid-column: 2 / 4;
@@ -63,6 +71,9 @@ h1, h2, h3{
 }
 .moduleChild:not(:first-child){
   border-bottom: 1px solid #e5e7eb;
+}
+.moduleChild:last-child{
+  padding-bottom: 2rem;
 }
 .moduleChild ul{
   list-style: none;
@@ -81,9 +92,31 @@ h1, h2, h3{
   width: 40px;
 }
 
-/* #contactWrapper input {
-  margin-bottom: 10px;
-} */
+#emailForm{
+  display: grid;
+  grid-template: 1fr 1fr 2fr 1fr / 1fr 1fr 1fr;
+  grid-gap: 10px;
+  align-self: start;
+  border-bottom: none;
+}
+#actionCall{
+  grid-column: 1 / 4;
+  text-align: left;
+  margin-bottom: 0px;
+}
+#emailForm input[type="email"]{
+  grid-column: 1 / 2;
+  height: 50%;
+  align-self: end;
+}
+#emailForm textarea{
+  grid-column: 1 / 4;
+}
+#emailForm button{
+  grid-column: 3 / 4;
+  height: 50%;
+  align-self: start;
+}
 
 #footer{
   border-top: 1px solid #e5e7eb;
@@ -91,4 +124,5 @@ h1, h2, h3{
   align-items: end;
   grid-column: 1 / 5;
   background-color: #ffffff;
+  text-align: center;
 }

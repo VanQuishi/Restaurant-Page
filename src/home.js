@@ -2,7 +2,7 @@ const home = document.createElement('div');
 home.classList.add('moduleWrapper');
 
 const titleWrapper = document.createElement('div');
-titleWrapper.classList.add('moduleChild');
+titleWrapper.classList.add('moduleChild', 'title');
 titleWrapper.id = "titleWrapper";
 let h1Title = document.createElement('h1');
 h1Title.textContent = "Unicorn's Taco Bar";
@@ -13,6 +13,7 @@ titleWrapper.appendChild(logo);
 
 const descriptionWrapper = document.createElement('div');
 descriptionWrapper.classList.add('moduleChild');
+descriptionWrapper.id = "descriptionWrapper"
 let paraDesc = document.createElement('h3');
 paraDesc.textContent = "Unicorn's Taco Bar specializes in Mexican-inspired food"
 let paraDesc2 = document.createElement('h3');

@@ -57,7 +57,7 @@ const createMenuItem = (imgSrc, itemTitle, itemPrice, color) => {
 }
 
 const titleWrapper = document.createElement('div');
-titleWrapper.classList.add('moduleChild');
+titleWrapper.classList.add('moduleChild', 'title');
 let h1Title = document.createElement('h1');
 h1Title.textContent = "Menu";
 titleWrapper.appendChild(h1Title);
