@@ -1,4 +1,4 @@
-import unicorn from "../src/unicorn.svg";
+import unicorn from "../assets/unicorn.svg";
 
 const home = document.createElement('div');
 home.classList.add('moduleWrapper');

@@ -1,9 +1,9 @@
 import './index.css';
-import header from './header';
-import home from './home';
-import menu from './menu';
-import contact from './contact';
-import footer from './footer';
+import header from './pages/header';
+import home from './pages/home';
+import menu from './pages/menu';
+import contact from './pages/contact';
+import footer from './pages/footer';
 
 const contentDiv = document.createElement('div');
 contentDiv.id = "content";

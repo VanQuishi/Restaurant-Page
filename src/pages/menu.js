@@ -1,3 +1,11 @@
+import taco from "../assets/taco-icon.svg";
+import beer from "../assets/beer.svg";
+import smoothie from "../assets/smoothie.svg";
+import margarita from "../assets/margarita.svg";
+import fries from "../assets/fries.svg";
+import nachos from "../assets/nachos.svg";
+import soup from "../assets/soup.svg";
+
 const menu = document.createElement('div');
 menu.classList.add('moduleWrapper');
 
@@ -70,15 +78,15 @@ tacoWrapper.appendChild(h2TacoTitle);
 
 let tacoGridWrapper = document.createElement('div');
 tacoGridWrapper.classList.add('menuGridWrapper');
-let taco1 = createMenuItem("../src/taco-icon.svg", "Indigo Taco", "5.00", "indigo");
-let taco2 = createMenuItem("../src/taco-icon.svg", "Red Taco", "5.00", "red");
-let taco3 = createMenuItem("../src/taco-icon.svg", "Orange Taco", "5.00", "orange");
-let taco4 = createMenuItem("../src/taco-icon.svg", "Yellow Taco", "5.00", "yellow");
-let taco5 = createMenuItem("../src/taco-icon.svg", "Green Taco", "5.00", "green");
-let taco6 = createMenuItem("../src/taco-icon.svg", "Blue Taco", "5.00", "blue");
-let taco7 = createMenuItem("../src/taco-icon.svg", "Violet Taco", "5.00", "violet"); 
-let taco8 = createMenuItem("../src/taco-icon.svg", "Black Taco", "5.00", "black");
-let taco9 = createMenuItem("../src/taco-icon.svg", "Invisible Taco", "5.00", "invisible");
+let taco1 = createMenuItem(taco, "Indigo Taco", "5.00", "indigo");
+let taco2 = createMenuItem(taco, "Red Taco", "5.00", "red");
+let taco3 = createMenuItem(taco, "Orange Taco", "5.00", "orange");
+let taco4 = createMenuItem(taco, "Yellow Taco", "5.00", "yellow");
+let taco5 = createMenuItem(taco, "Green Taco", "5.00", "green");
+let taco6 = createMenuItem(taco, "Blue Taco", "5.00", "blue");
+let taco7 = createMenuItem(taco, "Violet Taco", "5.00", "violet"); 
+let taco8 = createMenuItem(taco, "Black Taco", "5.00", "black");
+let taco9 = createMenuItem(taco, "Invisible Taco", "5.00", "invisible");
 
 tacoGridWrapper.appendChild(taco2);
 tacoGridWrapper.appendChild(taco3);
@@ -100,9 +108,9 @@ drinkWrapper.appendChild(h2Title);
 
 let drinkGridWrapper = document.createElement('div');
 drinkGridWrapper.classList.add('menuGridWrapper'); 
-let drink1 = createMenuItem("../src/beer.svg", "Beer", "5.00");
-let drink2 = createMenuItem("../src/smoothie.svg", "Avocado Smoothie", "5.00");
-let drink3 = createMenuItem("../src/margarita.svg", "Margarita", "5.00");
+let drink1 = createMenuItem(beer, "Beer", "5.00");
+let drink2 = createMenuItem(smoothie, "Avocado Smoothie", "5.00");
+let drink3 = createMenuItem(margarita, "Margarita", "5.00");
 drinkGridWrapper.appendChild(drink1);
 drinkGridWrapper.appendChild(drink2);
 drinkGridWrapper.appendChild(drink3);
@@ -117,9 +125,9 @@ sideWrapper.appendChild(sideTitle);
 
 let sideGridWrapper = document.createElement('div');
 sideGridWrapper.classList.add('menuGridWrapper'); 
-let side1 = createMenuItem("../src/fries.svg", "Fries", "5.00");
-let side2 = createMenuItem("../src/nachos.svg", "Nachos", "5.00");
-let side3 = createMenuItem("../src/soup.svg", "Gumbo Soup", "5.00");
+let side1 = createMenuItem(fries, "Fries", "5.00");
+let side2 = createMenuItem(nachos, "Nachos", "5.00");
+let side3 = createMenuItem(soup, "Gumbo Soup", "5.00");
 sideGridWrapper.appendChild(side1);
 sideGridWrapper.appendChild(side2);
 sideGridWrapper.appendChild(side3);
