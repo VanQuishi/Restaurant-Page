@@ -25,6 +25,7 @@ h1, h2, h3{
   gap: 10px;
   grid-column: 1 / 5;
   background-color: #ffffff;
+  padding-top: 10px;
 }
 
 #titleWrapper{
